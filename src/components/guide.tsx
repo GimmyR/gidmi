@@ -5,10 +5,12 @@ import { ReactNode } from "react";
 import PreviousNext from "./previous-next";
 
 export default async function Guide({ 
+	title,
 	previous,
 	next,
 	children 
 } : { 
+	title: string,
 	previous: { route: string, title: string } | null,
 	next: { route: string, title: string } | null,
 	children: ReactNode 
@@ -25,6 +27,7 @@ export default async function Guide({
 				</div>
 			</div>
 			<div className="col-12 col-xl-6 p-2 p-xl-0">
+				<h1 className='mb-5 px-5'>{title}</h1>
                 {children}
 				<PreviousNext previous={previous} next={next}/>
 			</div>

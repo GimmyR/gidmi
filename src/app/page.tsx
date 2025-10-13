@@ -1,5 +1,4 @@
 import Guide from "@/components/guide";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,8 +12,7 @@ export default async function HomePage() {
     };
 
 	return (
-		<Guide previous={null} next={nextLink}>
-            <h1 className='mb-5 px-5'>Get started</h1>
+		<Guide title="Getting started" previous={null} next={nextLink}>
             <div className='position-relative guide-content px-5'>
                 <p>
                     In this guide, we will see how to use <strong>Bootstrap (CSS & JavaScript)</strong> with <strong>Next</strong>, 
