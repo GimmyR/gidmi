@@ -1,0 +1,16 @@
+.text-gray {
+    color: #D7D7D7;
+}
+
+.text-gray:hover {
+    color: #BFBFBF;
+}
+
+.header-toggler {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.image-icon {
+    max-height: 23px;
+}
