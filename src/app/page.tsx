@@ -16,9 +16,11 @@ export default async function HomePage() {
 		<Guide previous={null} next={nextLink}>
             <h1 className='mb-5 px-5'>Get started</h1>
             <div className='position-relative guide-content px-5'>
-                <p>In this guide, we will see how to use <strong>Bootstrap (CSS & JavaScript)</strong> with <strong>Next</strong>, 
-                how to authenticate with <strong>Clerk</strong> and how to use database with <strong>Prisma</strong>. 
-                You need to know how to work with <strong>React</strong> and <strong>Next</strong> before following this tutorial.</p>
+                <p>
+                    In this guide, we will see how to use <strong>Bootstrap (CSS & JavaScript)</strong> with <strong>Next</strong>, 
+                    how to authenticate with <strong>Clerk</strong> and how to use database with <strong>Prisma</strong>. 
+                    You need to know how to work with <strong>React</strong> and <strong>Next</strong> before following this tutorial.
+                </p>
             </div>
         </Guide>
 	);
