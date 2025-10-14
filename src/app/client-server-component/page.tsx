@@ -15,8 +15,8 @@ export default async function ClientServerComponentPage() {
     };
 
     const nextLink = {
-        title: "Client / Server component",
-        route: "/client-server-component"
+        title: "Next & Clerk",
+        route: "/next-clerk"
     };
 
     return (
