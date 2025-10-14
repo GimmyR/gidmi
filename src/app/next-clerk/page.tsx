@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: title + ' - Gidmi'
 }
 
-export default async function ClientServerComponentPage() {
+export default async function NextClerkPage() {
     const previousLink = {
         title: "Client / Server component",
         route: "/client-server-component"
