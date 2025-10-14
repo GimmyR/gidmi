@@ -2,6 +2,8 @@ import CodeSnippet from "@/components/code-snippet";
 import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
+import { code7 } from "./code-7";
+import { code8 } from "./code-8";
 
 const title = "Install & configure Clerk";
 
@@ -27,7 +29,7 @@ export default async function InstallConfigureClerkPage() {
             <p>Secondly, create the <i><strong>.env</strong></i> file at the root of the project and paste the code <strong>Clerk</strong> suggested you to copy into it.</p>
             <p>Next, create the <i>src/<strong>middleware.ts</strong></i> file and paste the code <strong>Clerk</strong> suggested you to copy into it.</p>
             <p>Finally, replace the contents of <i>src/app/<strong>layout.tsx</strong></i> file with the one <strong>Clerk</strong> suggested you to copy, by keeping your import of <strong>Bootstrap CSS</strong>. However, you&apos;re still going to have to clean up the file of things you don&apos;t need. So I suggest you do something like this (I also recommend you to read the comments I left in the code) :</p>
-            <CodeSnippet language="tsx" file="code-7"/>
+            <CodeSnippet language="tsx" code={code7}/>
             <p>I suggest you to try out for yourself what we&apos;ve just installed and configured by launching your application (if it is not already done). Try to sign in by pressing <strong>SignInButton</strong>. This usually doesn&apos;t work because you haven&apos;t signed up yet.</p>
             <img src="/images/screenshot-4.png" className="img-fluid mb-4" alt="screenshot-4"/>
             <p>To do this, click on the <strong>Sign up</strong> link and then enter a username, your email address and your password.</p>
@@ -38,7 +40,7 @@ export default async function InstallConfigureClerkPage() {
             <img src="/images/screenshot-7.png" className="img-fluid mb-4" alt="screenshot-7"/>
             <p>If everything works well, we can move on. I&apos;ll grant you that <strong>SignInButton</strong> and <strong>SignUpButton</strong> aren&apos;t very aesthetically pleasing, especially since we chose to use <strong>Bootstrap</strong> instead of <strong>Tailwind</strong>.</p>
             <p>I invite you to delete these components from <i>src/app/<strong>layout.tsx</strong></i> to put there a Link component like this (read the comments again):</p>
-            <CodeSnippet language="tsx" file="code-8"/>
+            <CodeSnippet language="tsx" code={code8}/>
         </Guide>
     );
 }

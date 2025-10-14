@@ -2,6 +2,7 @@ import CodeSnippet from "@/components/code-snippet";
 import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
+import { code15 } from "./code-15";
 
 const title = "Create models";
 
@@ -23,7 +24,7 @@ export default async function CreateModelsPage() {
     return (
         <Guide title={title} previous={previousLink} next={nextLink}>
             <p>To check whether <strong>Prisma</strong> is working properly, let&apos;s create the <strong>Category</strong> and <strong>Product</strong> model in <i>prisma/<strong>schema.prisma</strong></i> file like this :</p>
-            <CodeSnippet language="prisma" file="code-15"/>
+            <CodeSnippet language="prisma" code={code15}/>
             <p>Let&apos;s run the following command to update our database schema :</p>
             <CommandSnippet>npx prisma db push</CommandSnippet>
             <p>Let&apos;s check that our database is working correctly by running the following command :</p>

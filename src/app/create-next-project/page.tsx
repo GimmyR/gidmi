@@ -3,6 +3,7 @@ import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
 import { code1 } from "./code-1";
+import { code2 } from "./code-2";
 
 export const metadata: Metadata = {
     title: 'Create Next project - Gidmi'
@@ -55,7 +56,7 @@ export default async function CreateNextProjectPage() {
             <p>Clean up <i>src/app/<strong>layout.tsx</strong></i> to get something like this :</p>
             <CodeSnippet language="tsx" code={code1}/>
             <p>Edit <i>src/app/<strong>page.tsx</strong></i> to get the most minimalist code to start with like this :</p>
-            <CodeSnippet language="tsx" code={""}/>
+            <CodeSnippet language="tsx" code={code2}/>
             <p>Run the following command to start the application and to see if everything works fine :</p>
             <CommandSnippet>npm run dev</CommandSnippet>
         </Guide>

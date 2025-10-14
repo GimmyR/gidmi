@@ -2,6 +2,7 @@ import CodeSnippet from "@/components/code-snippet";
 import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
+import { code14 } from "./code-14";
 
 const title = "Install & configure Prisma";
 
@@ -29,7 +30,7 @@ export default async function InstallConfigurePrismaPage() {
             <p>Now, run the following command to generate the database and a module for configuring <strong>Prisma</strong> :</p>
             <CommandSnippet>npx prisma db push</CommandSnippet>
             <p>Create the <i>src/lib/<strong>prisma.ts</strong></i> file and paste the following configuration code into it :</p>
-            <CodeSnippet language="ts" file="code-14"/>
+            <CodeSnippet language="ts" code={code14}/>
             <p>That&apos;s it ! <strong>Prisma</strong> is correctly configured.</p>
         </Guide>
     );
