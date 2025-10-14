@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: title + ' - Gidmi'
 }
 
-export default async function InstallConfigureClerkPage() {
+export default async function CreateSignInPage() {
     const previousLink = {
         title: "Install & configure Clerk",
         route: "/install-configure-clerk"
