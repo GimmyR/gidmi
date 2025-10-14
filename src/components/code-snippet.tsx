@@ -2,8 +2,6 @@
 
 import { CodeBlock } from "react-code-block";
 import ClipboardIconButton from "./clipboard-icon-button";
-import { useEffect, useState } from "react";
-import { fetchFileContent } from "@/actions";
 
 export default function CodeSnippet({ 
     
