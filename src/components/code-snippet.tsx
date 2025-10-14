@@ -7,25 +7,14 @@ import { fetchFileContent } from "@/actions";
 
 export default function CodeSnippet({ 
     
-    language, file 
+    language, code 
 
 } : {
 
     language: string,
-    file: string
+    code: string
 
 }) {
-    const [code, setCode] = useState("");
-
-    const fetchCode = async () => {
-        const text = await fetchFileContent(file);
-        setCode(text);
-    };
-
-    useEffect(() => {
-        fetchCode();
-    });
-
     return (
         <CodeBlock code={code} language={language}>
             <div className="position-relative mb-4">
