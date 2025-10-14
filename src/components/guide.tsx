@@ -27,8 +27,8 @@ export default async function Guide({
 				</div>
 			</div>
 			<div className="col-12 col-xl-6 p-2 p-xl-0">
-				<h1 className='mb-5 px-5'>{title}</h1>
-                {children}
+				<h1 className="mb-5">{title}</h1>
+				{children}
 				<PreviousNext previous={previous} next={next}/>
 			</div>
 		</div>

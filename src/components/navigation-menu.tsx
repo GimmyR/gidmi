@@ -9,7 +9,7 @@ export default function NavMenu() {
             { title: "Client / Server Component", link: "/client-server-component" }
         ]},
         { title: "Next & Clerk", link: "/next-clerk", chapters: [
-            { title: "Create Clerk application", link: "/create-clerk-project" },
+            { title: "Create Clerk application", link: "/create-clerk-application" },
             { title: "Install & configure Clerk", link: "/install-configure-clerk" },
             { title: "Create sign in page", link: "/create-sign-in-page" },
             { title: "Protect routes", link: "/protect-routes" },
