@@ -24,7 +24,7 @@ export default function CodeSnippet({
 
     useEffect(() => {
         fetchCode();
-    }, []);
+    });
 
     return (
         <CodeBlock code={code} language={language}>
