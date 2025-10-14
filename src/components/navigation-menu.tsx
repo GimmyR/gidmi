@@ -4,9 +4,9 @@ export default function NavMenu() {
     const parts = [
         { title: "Getting started", link: "/", chapters: [] },
         { title: "Next & Bootstrap", link: "/next-bootstrap", chapters: [
-            { title: "Create Next Project", link: "/create-next-project" },
+            { title: "Create Next project", link: "/create-next-project" },
             { title: "Use Bootstrap", link: "/use-bootstrap" },
-            { title: "Client / Server Component", link: "/client-server-component" }
+            { title: "Client / Server component", link: "/client-server-component" }
         ]},
         { title: "Next & Clerk", link: "/next-clerk", chapters: [
             { title: "Create Clerk application", link: "/create-clerk-application" },
