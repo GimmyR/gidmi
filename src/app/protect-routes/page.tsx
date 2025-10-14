@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: title + ' - Gidmi'
 }
 
-export default async function CustomizationPage() {
+export default async function ProtectRoutesPage() {
     const previousLink = {
         title: "Create Sign In page",
         route: "/create-sign-in"
