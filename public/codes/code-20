@@ -1,0 +1,26 @@
+// Make sure to write "use client" directive when you develop a client component
+"use client";
+
+import { useEffect } from "react";
+
+export default function DropdownButton({
+    title, subtitles
+}: {
+    title: string, subtitles: string[]
+}) {
+    useEffect(() => {
+    // Import Bootstrap JS only when component is rendered
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }, []);
+
+    return (
+        <div className="dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {title}
+            </button>
+            <ul className="dropdown-menu">
+                {subtitles.map(sub => <li key={sub}><a className="dropdown-item" href="#">{sub}</a></li>)}
+            </ul>
+        </div>
+    );
+}
