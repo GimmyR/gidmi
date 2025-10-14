@@ -2,7 +2,6 @@ import CodeSnippet from "@/components/code-snippet";
 import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
     title: 'Create Next project - Gidmi'
@@ -24,7 +23,7 @@ export default async function CreateNextProjectPage() {
             <p>After creating a directory for your project, move in it and open a terminal to run this command :</p>
             <CommandSnippet>npx create-next-app@latest ./</CommandSnippet>
             <p>This is what it should look like :</p>
-            <Image src="/images/screenshot-1.png" className="img-fluid mb-5" alt="screenshot-1"/>
+            <img src="/images/screenshot-1.png" className="img-fluid mb-5" alt="screenshot-1"/>
             <span className="d-block">I recommend that you make the same choices as I did, namely (for the most important) :</span>
             <ol type="1" className="mb-4">
                 <li>
@@ -53,7 +52,7 @@ export default async function CreateNextProjectPage() {
                 </li>  
             </ul>
             <p>Clean up <i>src/app/<strong>layout.tsx</strong></i> to get something like this :</p>
-            <CodeSnippet language="tsx" file="code-1"/>
+            <CodeSnippet language="tsx" file="code-1.txt"/>
             <p>Edit <i>src/app/<strong>page.tsx</strong></i> to get the most minimalist code to start with like this :</p>
             <CodeSnippet language="tsx" file="code-2"/>
             <p>Run the following command to start the application and to see if everything works fine :</p>
