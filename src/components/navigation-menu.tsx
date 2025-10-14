@@ -1,6 +1,14 @@
 import Link from "next/link";
 
-export default function NavMenu() {
+export default function NavMenu({
+
+    selected
+
+} : {
+
+    selected: string
+
+}) {
     const parts = [
         { title: "Getting started", link: "/", chapters: [] },
         { title: "Next & Bootstrap", link: "/next-bootstrap", chapters: [
@@ -26,11 +34,11 @@ export default function NavMenu() {
         <ol type="I">
             {parts.map(part =>
                 <li key={part.title} className="text-danger">
-                    <Link href={part.link} className={ `text-decoration-none text-light` }>{part.title}</Link>
+                    <Link href={part.link} className={ `text-decoration-none ${(selected === part.title) ? "activated-part" : "text-light"}` }>{part.title}</Link>
                     <ol type="1">
                         {part.chapters.map(chapter =>
                             <li key={chapter.title} className="text-danger">
-                                <Link href={chapter.link} className={ `text-decoration-none text-light` }>{chapter.title}</Link>
+                                <Link href={chapter.link} className={ `text-decoration-none ${(selected === chapter.title) ? "activated-part" : "text-light"}` }>{chapter.title}</Link>
                             </li>
                         )}
                     </ol>

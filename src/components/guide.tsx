@@ -23,7 +23,7 @@ export default async function Guide({
 					<button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navigation" aria-label="Close"></button>
 				</div>
 				<div className="offcanvas-body d-flex flex-column px-3">
-					<NavMenu/>
+					<NavMenu selected={title}/>
 				</div>
 			</div>
 			<div className="col-12 col-xl-6 p-2 p-xl-0">
