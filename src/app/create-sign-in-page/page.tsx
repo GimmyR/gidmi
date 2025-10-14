@@ -1,5 +1,4 @@
 import CodeSnippet from "@/components/code-snippet";
-import CommandSnippet from "@/components/command-snippet";
 import Guide from "@/components/guide";
 import { Metadata } from "next";
 
