@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Toggler from "./toggler";
 
 export default function Header() {
     return (
@@ -7,9 +8,7 @@ export default function Header() {
                 <Link href="/" className="d-flex flex-row align-items-center text-decoration-none fs-3 fw-bold text-light">
                     <img src="/images/logo.png" className='img-fluid image-icon me-1' alt="logo"/>Gidmi
                 </Link>
-                <button type="button" className="header-toggler p-0 d-xl-none" data-bs-toggle="offcanvas" data-bs-target="#navigation" aria-controls="navigation">
-                    <i className="bi bi-list fs-1 text-light"></i>
-                </button>
+                <Toggler/>
             </div>
         </header>
     );
