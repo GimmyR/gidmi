@@ -30,9 +30,8 @@ export default async function InstallConfigureClerkPage() {
             <p>Next, create the <i>src/<strong>middleware.ts</strong></i> file and paste the code <strong>Clerk</strong> suggested you to copy into it.</p>
             <p>Finally, replace the contents of <i>src/app/<strong>layout.tsx</strong></i> file with the one <strong>Clerk</strong> suggested you to copy, by keeping your import of <strong>Bootstrap CSS</strong>. However, you&apos;re still going to have to clean up the file of things you don&apos;t need. So I suggest you do something like this (I also recommend you to read the comments I left in the code) :</p>
             <CodeSnippet language="tsx" code={code7}/>
-            <p>I suggest you to try out for yourself what we&apos;ve just installed and configured by launching your application (if it is not already done). Try to sign in by pressing <strong>SignInButton</strong>. This usually doesn&apos;t work because you haven&apos;t signed up yet.</p>
-            <img src="/images/screenshot-4.png" className="img-fluid mb-4" alt="screenshot-4"/>
-            <p>To do this, click on the <strong>Sign up</strong> link and then enter a username, your email address and your password.</p>
+            <p>I suggest you to try out for yourself what we&apos;ve just installed and configured by launching your application (if it is not already done).</p>
+            <p>Click on the <strong>Sign up</strong> link and then enter a username, your email address and your password.</p>
             <img src="/images/screenshot-5.png" className="img-fluid mb-4" alt="screenshot-5"/>
             <p>After validation, you are asked to confirm your email address.</p>
             <img src="/images/screenshot-6.png" className="img-fluid mb-4" alt="screenshot-6"/>
