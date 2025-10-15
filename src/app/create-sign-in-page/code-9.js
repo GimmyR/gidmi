@@ -1,5 +1,6 @@
-export const code9 = `
-import { SignIn } from "@clerk/nextjs";
+export const code9 =
+`import { SignIn } from "@clerk/nextjs";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Sign in - My website",
@@ -10,5 +11,4 @@ export default async function SignInPage() {
     return (
         <SignIn/>
     );
-}
-`;
+}`;
