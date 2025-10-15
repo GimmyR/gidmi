@@ -38,7 +38,7 @@ export default async function InstallConfigureClerkPage() {
             <p>After confirming the email address, we are redirected to our home page where <strong>SignInButton</strong> and <strong>SignUpButton</strong> have disappeared to make way for <strong>UserButton</strong>. Use the latter to sign out.</p>
             <img src="/images/screenshot-7.png" className="img-fluid mb-4" alt="screenshot-7"/>
             <p>If everything works well, we can move on. I&apos;ll grant you that <strong>SignInButton</strong> and <strong>SignUpButton</strong> aren&apos;t very aesthetically pleasing, especially since we chose to use <strong>Bootstrap</strong> instead of <strong>Tailwind</strong>.</p>
-            <p>I invite you to delete these components from <i>src/app/<strong>layout.tsx</strong></i> to put there a Link component like this (read the comments again):</p>
+            <p>I invite you to sign out by pressing <strong>UserButton</strong> and to delete these components from <i>src/app/<strong>layout.tsx</strong></i> to put there a Link component like this (read the comments again):</p>
             <CodeSnippet language="tsx" code={code8}/>
         </Guide>
     );
