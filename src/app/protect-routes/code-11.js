@@ -1,4 +1,6 @@
-export const code11 = `
+export const code11 = 
+`import { Metadata } from "next";
+
 export const metadata: Metadata = {
     title: "Dashboard - My website",
     description: \`Welcome on the dashboard of my website. 
@@ -9,5 +11,4 @@ export default async function DashboardPage() {
     return (
         <h1 className="text-warning">Dashboard</h1>
     );
-}
-`;
+}`;
