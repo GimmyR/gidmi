@@ -21,7 +21,7 @@ export default function CodeSnippet({
                         <CodeBlock.Token/>
                     </CodeBlock.LineContent>
                 </CodeBlock.Code>
-                <ClipboardIconButton code={code} className="position-absolute top-0 end-0 m-4 text-light"/>
+                <ClipboardIconButton code={code} className="btn btn-outline-dark position-absolute top-0 end-0 m-4 text-light"/>
             </div>
         </CodeBlock>
     );

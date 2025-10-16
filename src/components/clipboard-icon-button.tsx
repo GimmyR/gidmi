@@ -1,5 +1,4 @@
 import useClipboard from "@/hooks/useClipboard";
-import Link from "next/link";
 
 export default function ClipboardIconButton({ 
     
@@ -13,8 +12,8 @@ export default function ClipboardIconButton({
     const { isCopied, copyToClipboard } = useClipboard();
 
     return (
-        <Link href="#" className={className} onClick={() => copyToClipboard(code)}>
+        <button className={className} onClick={() => copyToClipboard(code)}>
             <i className={ `bi ${ isCopied ? 'bi-clipboard-check' : 'bi-clipboard' }` }></i>
-        </Link>
+        </button>
     );
 }
