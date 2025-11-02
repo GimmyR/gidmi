@@ -4,6 +4,7 @@ import './globals.css';
 import { type Metadata } from 'next'
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   	title: 'Gidmi',
@@ -17,6 +18,7 @@ export default function RootLayout({
 }>) {
   	return (
         <html lang="en">
+            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490135232409415" crossOrigin="anonymous" strategy="afterInteractive"></Script>
             <body className='bg-dark'>
                 <Header/>
                 {children}
