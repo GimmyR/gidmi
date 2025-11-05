@@ -1,4 +1,3 @@
-//import GuideBody from "@/components/guide-body";
 import NavMenu from "@/components/navigation-menu";
 
 import { ReactNode } from "react";
