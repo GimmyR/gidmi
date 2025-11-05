@@ -39,8 +39,8 @@ export default async function UseBootstrapPage() {
             <p>Inside the <strong>useEffect</strong> callback function, import <strong>Bootstrap JS</strong> like this :</p>
             <CodeSnippet language="tsx" code={code6}/>
             <p>Now try to press the <strong>Dropdown</strong> button. This should work fine.</p>
-            <p>Note that this <strong>Bootstrap JS</strong> is only imported for our home page. If you create a new page or component with another <strong>Dropdown</strong> button without importing this javascript, it won&apos;t work. It&apos;s annoying, I admit, but we can&apos;t globally import this javascript bundle as we did with the CSS.</p>
-            <p>By the way, we&apos;ve added the <strong>Dropdown</strong> button like this just to test the <strong>Bootstrap JS</strong> bundle, but this is absolutely not recommended. Always try to subdivide your code into components to enable their reuse and make your code more readable.</p>
+            <p>Note that this <strong>Bootstrap JS</strong> is only imported for our home page. If you create a new page or component with another <strong>Dropdown</strong> button without importing this javascript, it won&apos;t work.</p>
+            <p>To globally import <strong>Bootstrap JS</strong>, we need to create a Client component. We will examine this in the next chapter.</p>
         </Guide>
     );
 }
