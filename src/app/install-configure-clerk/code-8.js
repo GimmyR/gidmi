@@ -1,5 +1,6 @@
 export const code8 = `
 import type { Metadata } from "next";
+import BootstrapClient from '@/components/bootstrap-client';
 
 import {
     // ClerkProvider component provides our pages and components with a user if the latter is authenticated
@@ -45,6 +46,7 @@ export default function RootLayout({
                         </SignedIn>
                     </header>
                     {children}
+                    <BootstrapClient/>
                 </body>
             </html>
         </ClerkProvider>

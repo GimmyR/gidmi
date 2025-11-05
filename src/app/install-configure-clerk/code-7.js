@@ -1,5 +1,6 @@
 export const code7 = `
 import type { Metadata } from "next";
+import BootstrapClient from '@/components/bootstrap-client';
 
 // This is how we globally import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,6 +45,7 @@ export default function RootLayout({
                         </SignedIn>
                     </header>
                     {children}
+                    <BootstrapClient/>
                 </body>
             </html>
         </ClerkProvider>
