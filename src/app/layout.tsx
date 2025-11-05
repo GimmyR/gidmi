@@ -5,6 +5,7 @@ import { type Metadata } from 'next'
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Script from 'next/script';
+import BootstrapClient from '@/components/bootstrap-client';
 
 export const metadata: Metadata = {
   	title: 'Gidmi',
@@ -23,6 +24,7 @@ export default function RootLayout({
                 <Header/>
                 {children}
                 <Footer/>
+                <BootstrapClient/>
             </body>
         </html>
   	)
