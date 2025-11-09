@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Guide {
+  id String @id @default(cuid())
+  author String
+  savedAt String
+  title String @unique
+  details GuideDetail[]
+  parts Part[]
+}
+
+model GuideDetail {
+  id String @id @default(cuid())
+  guideId String
+  guide Guide @relation(fields: [guideId], references: [id])
+  order Int
+  type String
+  content String
+}
+
+model Part {
+  id String @id @default(cuid())
+  guideId String
+  guide Guide @relation(fields: [guideId], references: [id])
+  order Int
+  title String @unique
+  details PartDetail[]
+  chapters Chapter[]
+}
+
+model PartDetail {
+  id String @id @default(cuid())
+  partId String
+  part Part @relation(fields: [partId], references: [id], onDelete: Cascade)
+  order Int
+  type String
+  content String
+}
+
+model Chapter {
+  id String @id @default(cuid())
+  partId String
+  part Part @relation(fields: [partId], references: [id], onDelete: Cascade)
+  order Int
+  title String @unique
+  details ChapterDetail[]
+}
+
+model ChapterDetail {
+  id String @id @default(cuid())
+  chapterId String
+  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  order Int
+  type String
+  content String
+}

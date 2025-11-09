@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Script from 'next/script';
 import BootstrapClient from '@/components/bootstrap-client';
+import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata: Metadata = {
   	title: 'Gidmi',
@@ -18,14 +19,16 @@ export default function RootLayout({
   	children: React.ReactNode
 }>) {
   	return (
-        <html lang="en">
-            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490135232409415" crossOrigin="anonymous" strategy="afterInteractive"></Script>
-            <body className='bg-dark'>
-                <Header/>
-                {children}
-                <Footer/>
-                <BootstrapClient/>
-            </body>
-        </html>
+        <ClerkProvider>
+            <html lang="en">
+                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490135232409415" crossOrigin="anonymous" strategy="afterInteractive"></Script>
+                <body className='bg-dark'>
+                    <Header/>
+                    {children}
+                    <Footer/>
+                    <BootstrapClient/>
+                </body>
+            </html>
+        </ClerkProvider>
   	)
 }

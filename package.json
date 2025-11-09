@@ -9,9 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@clerk/elements": "^0.23.79",
+    "@clerk/nextjs": "^6.34.5",
     "@emailjs/browser": "^4.4.1",
+    "@prisma/client": "^6.19.0",
+    "@prisma/extension-accelerate": "^2.0.2",
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.13.1",
+    "dotenv": "^17.2.3",
     "next": "15.5.4",
     "prism-react-renderer": "^2.4.1",
     "react": "19.1.0",
@@ -25,6 +30,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
+    "prisma": "^6.19.0",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }
