@@ -1,4 +1,5 @@
 import Guide from "@/components/guide";
+import prisma from "@/lib/prisma";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,18 +7,29 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-    const nextLink = { 
-        title: "Next & Bootstrap", 
-        route: "/next-bootstrap"
-    };
+    const guide = await prisma.guide.findFirst({
+        include: {
+            parts: {
+                orderBy: {
+                    order: "asc"
+                },
+                include: {
+                    chapters: {
+                        orderBy: {
+                            order: "asc"
+                        }
+                    }
+                }
+            },
+            details: {
+                orderBy: {
+                    order: "asc"
+                }
+            }
+        }
+    });
 
 	return (
-		<Guide title="Getting started" previous={null} next={nextLink}>
-            <p>
-                In this guide, we will see how to use <strong>Bootstrap (CSS & JavaScript)</strong> with <strong>Next</strong>, 
-                how to authenticate with <strong>Clerk</strong> and how to use database with <strong>Prisma</strong>. 
-                You need to know how to work with <strong>React</strong> and <strong>Next</strong> before following this tutorial.
-            </p>
-        </Guide>
+		<Guide title={guide?.title} parts={guide?.parts} details={guide?.details} selected={guide?.parts[0].title}></Guide>
 	);
 }
