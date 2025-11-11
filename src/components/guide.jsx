@@ -1,7 +1,7 @@
 import NavMenu from "@/components/navigation-menu";
 import GuideContent from "./guide-content";
 
-export default async function Guide({ title, parts, details, selected }) {
+export default async function Guide({ title, parts, details }) {
     return (
 		<div className="container-fluid d-flex flex-row min-vh-100 mt-5 pt-5 px-0 text-light">
 			<div className="offcanvas-lg offcanvas-start col-4 col-lg-3 bg-dark text-light" id="navigation" tabIndex={-1} aria-labelledby="navigationLabel">
@@ -10,7 +10,7 @@ export default async function Guide({ title, parts, details, selected }) {
 					<button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navigation" aria-label="Close"></button>
 				</div>
 				<div className="offcanvas-body d-flex flex-column px-3">
-					<NavMenu parts={parts} selected={selected}/>
+					<NavMenu parts={parts} selected={title}/>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">

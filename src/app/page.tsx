@@ -14,22 +14,29 @@ export default async function HomePage() {
                     order: "asc"
                 },
                 include: {
-                    chapters: {
+                    details: {
                         orderBy: {
                             order: "asc"
                         }
+                    },
+                    chapters: {
+                        orderBy: {
+                            order: "asc"
+                        },
+                        include: {
+                            details: {
+                                orderBy: {
+                                    order: "asc"
+                                }
+                            }
+                        }
                     }
-                }
-            },
-            details: {
-                orderBy: {
-                    order: "asc"
                 }
             }
         }
     });
 
 	return (
-		<Guide title={guide?.title} parts={guide?.parts} details={guide?.details} selected={guide?.parts[0].title}></Guide>
+		<Guide title={guide?.parts[0].title} parts={guide?.parts} details={guide?.parts[0].details}></Guide>
 	);
 }
