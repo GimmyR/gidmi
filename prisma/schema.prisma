@@ -19,17 +19,7 @@ model Guide {
   author String
   savedAt String
   title String @unique
-  details GuideDetail[]
   parts Part[]
-}
-
-model GuideDetail {
-  id String @id @default(cuid())
-  guideId String
-  guide Guide @relation(fields: [guideId], references: [id])
-  order Int
-  type String
-  content String
 }
 
 model Part {
