@@ -7,9 +7,7 @@ export default async function GuideContentByType({ detail }) {
             {detail.type === "text" ?
                 <div dangerouslySetInnerHTML={{ __html: detail.content }}></div>
             : detail.type === "command" ?
-                <div className='mb-5'>
-                    <CommandSnippet>{detail.content}</CommandSnippet>
-                </div>
+                <CommandSnippet>{detail.content}</CommandSnippet>
             : detail.type === "image" ?
                 <div className="mb-5">
                     <img src={`/images/${detail.content}`} className='img-fluid'/>
