@@ -13,9 +13,7 @@ export default async function GuideContentByType({ detail }) {
                     <img src={`/images/${detail.content}`} className='img-fluid'/>
                 </div>
             : 
-                <div className='mb-5'>
-                    <CodeSnippet language={detail.type} code={detail.content}/>
-                </div>
+                <CodeSnippet language={detail.type} code={detail.content}/>
             }
         </>
     );
