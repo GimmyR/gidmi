@@ -1,12 +1,12 @@
 import PreviousLink from './previous-link';
 import NextLink from './next-link';
 
-export default function PreviousNext({ 
-    previous, next 
-} : { 
-    previous: { route: string, title: string } | null, 
-    next: { route: string, title: string } | null 
-}) {
+type Endpoint = {
+    route: string,
+    title: string
+};
+
+export default function PreviousNext({ previous, next } : { previous: Endpoint | undefined, next: Endpoint | undefined }) {
     return (
         <div className="d-flex flex-row my-5">
             <div className="d-flex flex-row justify-content-start col-6">
