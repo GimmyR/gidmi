@@ -14,7 +14,7 @@ export default function CodeSnippet({
 
 }) {
     return (
-        <CodeBlock code={code} language={language}>
+        <CodeBlock code={JSON.parse(code)} language={language}>
             <div className="position-relative mb-4">
                 <CodeBlock.Code className="bg-black rounded-3 p-4">
                     <CodeBlock.LineContent>
