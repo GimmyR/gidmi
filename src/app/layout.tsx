@@ -21,7 +21,9 @@ export default function RootLayout({
   	return (
         <ClerkProvider>
             <html lang="en">
-                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490135232409415" crossOrigin="anonymous" strategy="afterInteractive"></Script>
+                <head>
+                    <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490135232409415" crossOrigin="anonymous" strategy="afterInteractive"></Script>
+                </head>
                 <body className='bg-dark'>
                     <Header/>
                     {children}
