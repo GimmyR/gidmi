@@ -129,7 +129,7 @@ export default async function Guide({ title, parts, details }) {
 				</div>
 				<div className="offcanvas-body d-flex flex-column px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<Adsense format="rectangle"/>
+					<Adsense format="vertical"/>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
