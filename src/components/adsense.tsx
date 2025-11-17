@@ -6,7 +6,7 @@ export default function Adsense({ format = "auto" } : { format: string }) {
     useEffect(() => {
         try {
             //@ts-ignore
-            (adsbygoogle = window.adsbygoogle || []).push({});
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
         } catch(e) {
             console.log(e)
         }
