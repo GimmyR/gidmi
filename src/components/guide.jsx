@@ -129,7 +129,9 @@ export default async function Guide({ title, parts, details }) {
 				</div>
 				<div className="offcanvas-body d-flex flex-column px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<Adsense format="vertical"/>
+					<div className="d-flex flex-row justify-content-center">
+						<Adsense format="vertical"/>
+					</div>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
@@ -138,7 +140,7 @@ export default async function Guide({ title, parts, details }) {
 				<Adsense format="horizontal"/>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
-			<div className="offcanvas-lg col-lg-3">
+			<div className="offcanvas-lg d-flex flex-row justify-content-center col-lg-3">
 				<Adsense format="vertical"/>
 			</div>
 		</div>
