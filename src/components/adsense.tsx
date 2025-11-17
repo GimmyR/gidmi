@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function Adsense() {
+export default function Adsense({ format = "auto" } : { format: string }) {
     useEffect(() => {
         try {
             //@ts-ignore
@@ -17,7 +17,7 @@ export default function Adsense() {
             style={{ display: "block" }}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot="5964084213"
-            data-ad-format="auto"
+            data-ad-format={format}
             data-full-width-responsive="true">
         </ins>
     );
