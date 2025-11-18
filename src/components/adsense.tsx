@@ -2,8 +2,15 @@
 
 import { useEffect, useRef } from "react";
 
-export default function Adsense({ slot, className } : { slot: string, className: string }) {
-    const ref = useRef(null);
+const style = {
+    display: "block", 
+    width: "100%", 
+    minHeight: "150px"
+};
+
+export default function Adsense({ slot } : { slot: string }) {
+    const ref = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         const timer = setTimeout(() => {
             if(ref.current) {
@@ -14,18 +21,20 @@ export default function Adsense({ slot, className } : { slot: string, className:
                     console.log(e)
                 }
             }
-        }, 500);
+        }, 1000);
         
         return () => clearTimeout(timer);
     });
 
     return (
-        <ins ref={ref} className={`adsbygoogle ${className}`}
-            style={{ display: "block", width: "100%", minHeight: "auto", height: "auto" }}
-            data-ad-client="ca-pub-9490135232409415"
-            data-ad-slot={slot}
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins>
+        <div ref={ref} style={{...style, margin: "0 auto"}}>
+            <ins className="adsbygoogle"
+                style={style}
+                data-ad-client="ca-pub-9490135232409415"
+                data-ad-slot={slot}
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+        </div>
     );
 }
