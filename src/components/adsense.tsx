@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function Adsense({ align = "text-start",format = "auto" } : { align: string, format: string }) {
+export default function Adsense({ format = "auto" } : { align: string, format: string }) {
     useEffect(() => {
         try {
             //@ts-ignore
@@ -13,14 +13,12 @@ export default function Adsense({ align = "text-start",format = "auto" } : { ali
     });
 
     return (
-        <div className={align}>
-            <ins className="adsbygoogle col-12"
-                style={{ display: "inline-block" }}
-                data-ad-client="ca-pub-9490135232409415"
-                data-ad-slot="5964084213"
-                data-ad-format={format}
-                data-full-width-responsive="true">
-            </ins>
-        </div>
+        <ins className="adsbygoogle"
+            style={{ display: "block", width: "100%", minHeight: "100px" }}
+            data-ad-client="ca-pub-9490135232409415"
+            data-ad-slot="5964084213"
+            data-ad-format={format}
+            data-full-width-responsive="true">
+        </ins>
     );
 }
