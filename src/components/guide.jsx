@@ -129,17 +129,17 @@ export default async function Guide({ title, parts, details }) {
 				</div>
 				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<Adsense format="vertical"/>
+					<Adsense slot="5964084213" format="vertical"/>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
-				<Adsense format="auto"/>
+				{/*<Adsense format="horizontal"/>*/}
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
-				<Adsense format="vertical"/>
+				{/*<Adsense format="vertical"/>*/}
 			</div>
 		</div>
     );
