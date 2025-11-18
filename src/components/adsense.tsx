@@ -3,23 +3,19 @@
 import { useEffect, useRef } from "react";
 
 const style = {
-    display: "inline-block", 
-    width: "160px", 
-    height: "600px"
+    display: "block", 
+    width: "100%", 
+    minHeight: "150px"
 };
 
 export default function Adsense({ slot } : { slot: string }) {
-    const ref = useRef(null);
-
     useEffect(() => {
         const timer = setTimeout(() => {
-            if(ref.current) {
-                try {
-                    //@ts-ignore
-                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                } catch(e) {
-                    console.log(e)
-                }
+            try {
+                //@ts-ignore
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch(e) {
+                console.log(e)
             }
         }, 1000);
         
@@ -27,10 +23,12 @@ export default function Adsense({ slot } : { slot: string }) {
     });
 
     return (
-        <ins ref={ref} className="adsbygoogle"
+        <ins className="adsbygoogle"
             style={style}
             data-ad-client="ca-pub-9490135232409415"
-            data-ad-slot={slot}>
+            data-ad-slot={slot}
+            data-ad-format="auto"
+            data-full-width-responsive="true">
         </ins>
     );
 }
