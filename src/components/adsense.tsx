@@ -18,10 +18,10 @@ export default function Adsense({ slot } : { slot: string }) {
 
     return (
         <ins className="adsbygoogle"
-            style={{ display: "flex", flexDirection: "row", justifyContent: "center", width: "100%", minHeight: "100px" }}
+            style={{ display: "flex", flexDirection: "row", justifyContent: "center", width: "100%", minHeight: "600px" }}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}
-            data-ad-format="auto"
+            data-ad-format="vertical"
             data-full-width-responsive="true">
         </ins>
     );
