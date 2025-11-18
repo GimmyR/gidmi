@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function Adsense({ slot } : { slot: string }) {
+export default function Adsense({ slot, className } : { slot: string, className: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             try {
@@ -17,7 +17,7 @@ export default function Adsense({ slot } : { slot: string }) {
     });
 
     return (
-        <ins className="adsbygoogle my-5"
+        <ins className={`adsbygoogle ${className}`}
             style={{ display: "block", width: "100%", minHeight: "100px" }}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}
