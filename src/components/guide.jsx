@@ -138,7 +138,7 @@ export default async function Guide({ title, parts, details }) {
 				<Adsense align="text-center" format="horizontal"/>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
-			<div className="d-none d-lg-flex col-lg-3">
+			<div className="d-none d-lg-block col-lg-3">
 				<Adsense align="text-center" format="vertical"/>
 			</div>
 		</div>
