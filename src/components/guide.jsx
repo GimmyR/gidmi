@@ -127,7 +127,7 @@ export default async function Guide({ title, parts, details }) {
 					<h5 className="offcanvas-title" id="navigationLabel">Menu</h5>
 					<button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navigation" aria-label="Close"></button>
 				</div>
-				<div className="offcanvas-body d-flex flex-column px-3">
+				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
 					<NavMenu parts={parts} selected={title}/>
 					<Adsense format="vertical"/>
 				</div>
