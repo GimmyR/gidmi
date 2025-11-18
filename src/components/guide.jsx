@@ -129,7 +129,9 @@ export default async function Guide({ title, parts, details }) {
 				</div>
 				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<Adsense slot="5964084213"/>
+					<div className="my-5">
+						<Adsense slot="5964084213"/>
+					</div>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
