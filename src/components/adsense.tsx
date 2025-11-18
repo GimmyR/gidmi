@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 const style = {
     display: "block", 
     width: "100%", 
-    minHeight: "150px"
+    minHeight: "auto",
+    height: "auto"
 };
 
 export default function Adsense({ slot } : { slot: string }) {
