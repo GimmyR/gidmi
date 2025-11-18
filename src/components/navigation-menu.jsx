@@ -13,7 +13,7 @@ export default function NavMenu({
     };
 
     return (
-        <ol type="I" className="mb-5">
+        <ol type="I">
             {parts.map(part =>
                 <li key={part.title} className="text-danger">
                     <Link href={ "/part/" + part.id} className={ `text-decoration-none ${(selected === part.title) ? "activated-part" : "text-light"}` } onClick={() => hideOffcanvas()}>{part.title}</Link>
