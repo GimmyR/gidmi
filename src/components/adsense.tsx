@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function Adsense({ slot, format = "auto" } : { slot: string, format: string }) {
+export default function Adsense({ slot } : { slot: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             try {
@@ -21,7 +21,7 @@ export default function Adsense({ slot, format = "auto" } : { slot: string, form
             style={{ display: "flex", flexDirection: "row", justifyContent: "center", width: "100%", minHeight: "100px" }}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}
-            data-ad-format={format}
+            data-ad-format="auto"
             data-full-width-responsive="true">
         </ins>
     );
