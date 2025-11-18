@@ -14,8 +14,8 @@ export default function Adsense({ align = "text-start",format = "auto" } : { ali
 
     return (
         <div className={align}>
-            <ins className="adsbygoogle"
-                style={{ display: "inline-block", width: "100%", minHeight: "100px" }}
+            <ins className="adsbygoogle col-12"
+                style={{ display: "inline-block" }}
                 data-ad-client="ca-pub-9490135232409415"
                 data-ad-slot="5964084213"
                 data-ad-format={format}
