@@ -18,7 +18,7 @@ export default function Adsense({ slot, className } : { slot: string, className:
 
     return (
         <ins className={`adsbygoogle ${className}`}
-            style={{ display: "block", width: "100%", minHeight: "100px" }}
+            style={{ display: "block", width: "100%", minHeight: "auto", height: "auto" }}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}
             data-ad-format="auto"
