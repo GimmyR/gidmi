@@ -135,7 +135,7 @@ export default async function Guide({ title, parts, details }) {
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
-				<Adsense format="horizontal"/>
+				<Adsense format="auto"/>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
