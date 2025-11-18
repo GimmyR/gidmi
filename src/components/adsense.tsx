@@ -4,12 +4,16 @@ import { useEffect } from "react";
 
 export default function Adsense({ slot } : { slot: string }) {
     useEffect(() => {
-        try {
-            //@ts-ignore
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch(e) {
-            console.log(e)
-        }
+        const timer = setTimeout(() => {
+            try {
+                //@ts-ignore
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch(e) {
+                console.log(e)
+            }
+        }, 200);
+        
+        return () => clearTimeout(timer);
     });
 
     return (
