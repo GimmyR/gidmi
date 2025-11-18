@@ -4,9 +4,8 @@ import { useEffect, useRef } from "react";
 
 const style = {
     display: "block", 
-    width: "100%", 
-    minHeight: "auto",
-    height: "auto"
+    width: "160px", 
+    height: "600px"
 };
 
 export default function Adsense({ slot } : { slot: string }) {
@@ -33,8 +32,7 @@ export default function Adsense({ slot } : { slot: string }) {
                 style={style}
                 data-ad-client="ca-pub-9490135232409415"
                 data-ad-slot={slot}
-                data-ad-format="auto"
-                data-full-width-responsive="true">
+                data-ad-format="vertical">
             </ins>
         </div>
     );
