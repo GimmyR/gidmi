@@ -3,7 +3,7 @@
 import "./adsense.css";
 import { useEffect } from "react";
 
-export default function VerticalAdsense({ className } : { className: string }) {
+export default function HorizontalAdsense({ className } : { className: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             try {
@@ -18,7 +18,7 @@ export default function VerticalAdsense({ className } : { className: string }) {
     });
 
     return (
-        <ins className={ `adsbygoogle ${className} vertical-ads` }
+        <ins className={ `adsbygoogle ${className} horizontal-ads` }
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot="5964084213">
         </ins>
