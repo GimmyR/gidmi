@@ -18,7 +18,7 @@ export default function HorizontalAdsense({ className = "" } : { className: stri
     });
 
     return (
-        <div className={ `text-align ${className}` }>
+        <div className={ `text-center ${className}` }>
             <ins className="adsbygoogle horizontal-ads"
                 data-ad-client="ca-pub-9490135232409415"
                 data-ad-slot="5964084213">
