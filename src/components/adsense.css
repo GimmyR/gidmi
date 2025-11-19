@@ -5,6 +5,14 @@
 @media(min-width: 992px) { 
     .vertical-ads { 
         display: block;
+        width: 240px; 
+        height: 500px; 
+    } 
+}
+
+@media(min-width: 1200px) { 
+    .vertical-ads { 
+        display: block;
         width: 330px; 
         height: 500px; 
     } 
@@ -12,6 +20,6 @@
 
 .horizontal-ads {
     display: inline-block;
-    width: 576px;
+    width: 430px;
     height: 50px;
 }
