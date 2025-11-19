@@ -3,10 +3,6 @@
 import "./adsense.css";
 import { useEffect, useRef } from "react";
 
-const style = {
-    display: "block"
-};
-
 export default function Adsense({ slot } : { slot: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -23,11 +19,8 @@ export default function Adsense({ slot } : { slot: string }) {
 
     return (
         <ins className="adsbygoogle gidmi-ads"
-            style={style}
             data-ad-client="ca-pub-9490135232409415"
-            data-ad-slot={slot}
-            data-ad-format="auto"
-            data-full-width-responsive="true">
+            data-ad-slot={slot}>
         </ins>
     );
 }

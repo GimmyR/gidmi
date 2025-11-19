@@ -1,17 +1,10 @@
 .gidmi-ads { 
-    width: 320px; 
-    height: 100px; 
+    display: none;
 }
 
-@media(min-width: 500px) { 
+@media(min-width: 992px) { 
     .gidmi-ads { 
-        width: 468px; 
-        height: 60px; 
-    } 
-}
-
-@media(min-width: 800px) { 
-    .gidmi-ads { 
-        width: 728px; height: 90px; 
+        display: block;
+        width: 330px; height: 800px; 
     } 
 }
