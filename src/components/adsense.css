@@ -10,14 +10,6 @@
     } 
 }
 
-@media(min-width: 1200px) { 
-    .vertical-ads { 
-        display: block;
-        width: 330px; 
-        height: 500px; 
-    } 
-}
-
 .horizontal-ads {
     display: inline-block;
     width: 430px;
