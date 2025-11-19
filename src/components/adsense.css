@@ -11,7 +11,7 @@
 }
 
 .horizontal-ads {
-    display: block;
+    display: inline-block;
     width: 576px;
     height: 50px;
 }

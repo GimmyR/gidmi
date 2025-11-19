@@ -141,7 +141,7 @@ export default async function Guide({ title, parts, details }) {
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
 				<div className="d-flex flex-column align-items-center px-3">
-					<VerticalAdsense className="mt-5"/>
+					<VerticalAdsense className="mt-2"/>
 				</div>
 			</div>
 		</div>

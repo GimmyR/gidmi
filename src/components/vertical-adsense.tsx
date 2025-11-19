@@ -3,7 +3,7 @@
 import "./adsense.css";
 import { useEffect } from "react";
 
-export default function VerticalAdsense({ className } : { className: string }) {
+export default function VerticalAdsense({ className = "" } : { className: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             try {
