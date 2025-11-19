@@ -139,7 +139,9 @@ export default async function Guide({ title, parts, details }) {
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
-				<VerticalAdsense slot="5964084213"/>
+				<div className="d-flex flex-column align-items-center px-3">
+					<VerticalAdsense slot="5964084213"/>
+				</div>
 			</div>
 		</div>
     );

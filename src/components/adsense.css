@@ -5,6 +5,6 @@
 @media(min-width: 992px) { 
     .vertical-ads { 
         display: block;
-        width: 330px; height: 800px; 
+        width: 330px; height: 500px; 
     } 
 }
