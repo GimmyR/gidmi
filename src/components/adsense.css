@@ -1,9 +1,9 @@
-.gidmi-ads { 
+.vertical-ads { 
     display: none;
 }
 
 @media(min-width: 992px) { 
-    .gidmi-ads { 
+    .vertical-ads { 
         display: block;
         width: 330px; height: 800px; 
     } 

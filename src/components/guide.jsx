@@ -1,7 +1,7 @@
 import NavMenu from "@/components/navigation-menu";
 import GuideContent from "./guide-content";
 import PreviousNext from "./previous-next";
-import Adsense from "./adsense";
+import VerticalAdsense from "./vertical-adsense";
 
 export default async function Guide({ title, parts, details }) {
 	const findPrevious = () => {
@@ -122,24 +122,24 @@ export default async function Guide({ title, parts, details }) {
 
     return (
 		<div className="container-fluid d-flex flex-row min-vh-100 mt-5 pt-5 px-0 text-light">
-			<div className="offcanvas-lg offcanvas-start min-vh-100 col-4 col-lg-3 bg-dark text-light" id="navigation" tabIndex={-1} aria-labelledby="navigationLabel">
+			<div className="offcanvas-lg offcanvas-start col-4 col-lg-3 bg-dark text-light" id="navigation" tabIndex={-1} aria-labelledby="navigationLabel">
 				<div className="offcanvas-header">
 					<h5 className="offcanvas-title" id="navigationLabel">Menu</h5>
 					<button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navigation" aria-label="Close"></button>
 				</div>
 				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<Adsense slot="5964084213" className="mt-5"/>
+					<VerticalAdsense slot="5964084213"/>
 				</div>
 			</div>
-			<div className="min-vh-100 col-12 col-lg-6 p-2 p-lg-0">
+			<div className="col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
 				{/*<Adsense format="horizontal"/>*/}
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
-			<div className="d-none d-lg-block min-vh-100 col-lg-3">
-				{/*<Adsense format="vertical"/>*/}
+			<div className="d-none d-lg-block col-lg-3">
+				<VerticalAdsense slot="5964084213"/>
 			</div>
 		</div>
     );

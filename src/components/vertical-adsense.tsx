@@ -1,9 +1,9 @@
 "use client";
 
 import "./adsense.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-export default function Adsense({ slot } : { slot: string }) {
+export default function VerticalAdsense({ slot } : { slot: string }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             try {
@@ -18,7 +18,7 @@ export default function Adsense({ slot } : { slot: string }) {
     });
 
     return (
-        <ins className="adsbygoogle gidmi-ads"
+        <ins className="adsbygoogle vertical-ads"
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}>
         </ins>
