@@ -1,5 +1,6 @@
 "use client";
 
+import "./adsense.css";
 import { useEffect, useRef } from "react";
 
 const style = {
@@ -21,7 +22,7 @@ export default function Adsense({ slot } : { slot: string }) {
     });
 
     return (
-        <ins className="adsbygoogle"
+        <ins className="adsbygoogle gidmi-ads"
             style={style}
             data-ad-client="ca-pub-9490135232409415"
             data-ad-slot={slot}
