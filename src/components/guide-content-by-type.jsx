@@ -1,5 +1,6 @@
 import CommandSnippet from "./command-snippet";
 import CodeSnippet from "./code-snippet";
+import ArticleAdsense from "./article-adsense";
 
 export default async function GuideContentByType({ detail }) {
     return (
@@ -11,6 +12,8 @@ export default async function GuideContentByType({ detail }) {
             : detail.type === "image" ?
                 <img src={`/images/${detail.content}`} className='img-fluid mb-5'/>
             : <CodeSnippet language={detail.type} code={detail.content}/>}
+            
+            {detail.type !== "text" && <ArticleAdsense className="my-3"/>}
         </>
     );
 }
