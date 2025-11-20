@@ -137,13 +137,13 @@ export default async function Guide({ title, parts, details }) {
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
+				<HorizontalAdsense className="my-5"/>
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
 				<div className="d-flex flex-column align-items-center px-3">
 					<VerticalAdsense className="mt-2"/>
 				</div>
 			</div>
-			<HorizontalAdsense className="my-5"/>
 		</div>
     );
 }
