@@ -9,7 +9,9 @@ export default async function GuideContentByType({ detail }) {
             : detail.type === "command" ?
                 <CommandSnippet>{detail.content}</CommandSnippet>
             : detail.type === "image" ?
-                <img src={`/images/${detail.content}`} className='img-fluid'/>
+                <div className="d-flex flex-row justify-content-center">
+                    <img src={`/images/${detail.content}`} className='img-fluid'/>
+                </div>
             : <CodeSnippet language={detail.type} code={detail.content}/>}
         </>
     );
