@@ -1,0 +1,11 @@
+.vertical-ads {
+    display: none;
+}
+
+@media(min-width: 992px) {
+    .vertical-ads {
+        display: block;
+        width: 240px;
+        height: 600px;
+    }
+}
