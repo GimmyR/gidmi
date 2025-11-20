@@ -1,6 +1,5 @@
 "use client";
 
-import "./adsense.css";
 import { useEffect } from "react";
 
 export default function HorizontalAdsense({ className = "" } : { className: string }) {
@@ -19,7 +18,8 @@ export default function HorizontalAdsense({ className = "" } : { className: stri
 
     return (
         <div className={ `text-center ${className}` }>
-            <ins className="adsbygoogle horizontal-ads"
+            <ins className="adsbygoogle"
+                style={{ display: "inline-block", width: "430px", height: "50px" }}
                 data-ad-client="ca-pub-9490135232409415"
                 data-ad-slot="5964084213"
                 data-ad-format="horizontal"
