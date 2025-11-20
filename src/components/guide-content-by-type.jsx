@@ -12,8 +12,6 @@ export default async function GuideContentByType({ detail }) {
             : detail.type === "image" ?
                 <img src={`/images/${detail.content}`} className='img-fluid'/>
             : <CodeSnippet language={detail.type} code={detail.content}/>}
-
-            {detail.type !== "text" && <ArticleAdsense className="my-5"/>}
         </>
     );
 }
