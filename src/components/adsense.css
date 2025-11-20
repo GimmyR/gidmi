@@ -6,36 +6,12 @@
     .vertical-ads { 
         display: block;
         width: 240px; 
-        height: 480px; 
-    } 
-}
-
-@media(min-width: 1400px) { 
-    .vertical-ads { 
-        display: block;
-        width: 300px; 
-        height: 600px; 
+        height: 500px; 
     } 
 }
 
 .horizontal-ads {
     display: inline-block;
     width: 430px;
-    height: 60px;
-}
-
-@media(min-width: 1200px) {
-    .horizontal-ads {
-        display: inline-block;
-        width: 580px;
-        height: 60px;
-    }
-}
-
-@media(min-width: 1400px) {
-    .horizontal-ads {
-        display: inline-block;
-        width: 680px;
-        height: 60px;
-    }
+    height: 50px;
 }
