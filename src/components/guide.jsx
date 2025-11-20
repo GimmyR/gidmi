@@ -122,7 +122,7 @@ export default async function Guide({ title, parts, details }) {
 	};
 
     return (
-		<div className="container-fluid d-flex flex-row min-vh-100 mt-5 pt-5 px-0 text-light">
+		<div className="container-fluid d-flex flex-row mt-5 pt-5 px-0 text-light">
 			<div className="offcanvas-lg offcanvas-start col-4 col-lg-3 bg-dark text-light" id="navigation" tabIndex={-1} aria-labelledby="navigationLabel">
 				<div className="offcanvas-header">
 					<h5 className="offcanvas-title" id="navigationLabel">Menu</h5>
@@ -133,7 +133,7 @@ export default async function Guide({ title, parts, details }) {
 					<VerticalAdsense className="mt-4 mb-5"/>
 				</div>
 			</div>
-			<div className="d-flex flex-column col-12 col-lg-6 p-2 p-lg-0">
+			<div className="min-vh-100 d-flex flex-column col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
 				<ArticleAdsense className="my-5"/>
