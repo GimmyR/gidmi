@@ -1,6 +1,5 @@
 import CommandSnippet from "./command-snippet";
 import CodeSnippet from "./code-snippet";
-import ArticleAdsense from "./article-adsense";
 
 export default async function GuideContentByType({ detail }) {
     return (
