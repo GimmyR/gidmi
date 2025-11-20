@@ -2,7 +2,7 @@ import NavMenu from "@/components/navigation-menu";
 import GuideContent from "./guide-content";
 import PreviousNext from "./previous-next";
 import VerticalAdsense from "./vertical-adsense";
-import HorizontalAdsense from "./horizontal-adsense";
+import ArticleAdsense from "./article-adsense";
 
 export default async function Guide({ title, parts, details }) {
 	const findPrevious = () => {
@@ -136,8 +136,8 @@ export default async function Guide({ title, parts, details }) {
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
+				<ArticleAdsense className="my-5"/>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
-				<HorizontalAdsense className="my-5"/>
 			</div>
 			<div className="d-none d-lg-block col-lg-3">
 				<div className="d-flex flex-column align-items-center px-3">
