@@ -17,11 +17,13 @@ export default function VerticalAdsense({ className = "" } : { className: string
     });
 
     return (
-        <ins className={ `adsbygoogle d-block col-12 text-center ${className}` }
-            data-ad-client="ca-pub-9490135232409415"
-            data-ad-slot="5964084213"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins>
+        <div className={ `d-block col-12 ${className}` }>
+            <ins className="adsbygoogle d-block text-center"
+                data-ad-client="ca-pub-9490135232409415"
+                data-ad-slot="5964084213"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+        </div>
     );
 }
