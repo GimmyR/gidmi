@@ -122,7 +122,7 @@ export default async function Guide({ title, parts, details }) {
 	};
 
     return (
-		<div className="container-fluid d-flex flex-row mt-5 pt-5 px-0 text-light">
+		<div className="container-fluid d-flex flex-row min-vh-100 mt-5 pt-5 px-0 text-light">
 			<div className="offcanvas-lg offcanvas-start col-4 col-lg-3 bg-dark text-light" id="navigation" tabIndex={-1} aria-labelledby="navigationLabel">
 				<div className="offcanvas-header">
 					<h5 className="offcanvas-title" id="navigationLabel">Menu</h5>
