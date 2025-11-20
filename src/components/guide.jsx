@@ -130,7 +130,9 @@ export default async function Guide({ title, parts, details }) {
 				</div>
 				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
 					<NavMenu parts={parts} selected={title}/>
-					<VerticalAdsense className="mt-4 mb-5"/>
+					<div className="d-block col-12">
+						<VerticalAdsense className="mt-4 mb-5"/>
+					</div>
 				</div>
 			</div>
 			<div className="col-12 col-lg-6 p-2 p-lg-0">
@@ -139,10 +141,8 @@ export default async function Guide({ title, parts, details }) {
 				<ArticleAdsense className="my-5"/>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</div>
-			<div className="d-none d-lg-block col-lg-3">
-				<div className="d-flex flex-column align-items-center px-3">
-					<VerticalAdsense className="mt-2"/>
-				</div>
+			<div className="d-none d-lg-block col-lg-3 px-3">
+				<VerticalAdsense className="mt-2"/>
 			</div>
 		</div>
     );
