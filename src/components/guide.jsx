@@ -133,7 +133,7 @@ export default async function Guide({ title, parts, details }) {
 					<VerticalAdsense className="mt-4 mb-5"/>
 				</div>
 			</div>
-			<div className="col-12 col-lg-6 p-2 p-lg-0">
+			<div className="d-flex flex-column col-12 col-lg-6 p-2 p-lg-0">
 				<h1 className="mb-5">{title}</h1>
 				{details.map((detail) => <GuideContent key={detail.id} detail={detail}/>)}
 				<ArticleAdsense className="my-5"/>
