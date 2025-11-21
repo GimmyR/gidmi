@@ -5,7 +5,7 @@ export default function GuideContent({ detail }) {
     return (
         <>
             <GuideContentByType detail={detail}/>
-            {detail.type === "image" && <ArticleAdsense className="my-5"/>}
+            {detail.type === "image" && <ArticleAdsense className="mb-5"/>}
         </>
     );
 }
