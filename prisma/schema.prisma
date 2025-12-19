@@ -14,47 +14,56 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id      Int     @id @default(autoincrement())
+  clerkId String  @unique
+  email   String  @unique
+  name    String?
+  guides  Guide[]
+}
+
 model Guide {
-  id String @id @default(cuid())
-  author String
-  savedAt String
-  title String @unique
-  parts Part[]
+  id       String @id @default(cuid())
+  authorId Int
+  author   User  @relation(fields: [authorId], references: [id])
+  savedAt  String
+  title    String @unique
+  parts    Part[]
 }
 
 model Part {
-  id String @id @default(cuid())
-  guideId String
-  guide Guide @relation(fields: [guideId], references: [id])
-  order Int
-  title String @unique
-  details PartDetail[]
+  id       String       @id @default(cuid())
+  guideId  String
+  guide    Guide        @relation(fields: [guideId], references: [id])
+  order    Int
+  title    String       @unique
+  details  PartDetail[]
   chapters Chapter[]
 }
 
 model PartDetail {
-  id String @id @default(cuid())
-  partId String
-  part Part @relation(fields: [partId], references: [id], onDelete: Cascade)
-  order Int
-  type String
+  id      String @id @default(cuid())
+  partId  String
+  part    Part   @relation(fields: [partId], references: [id], onDelete: Cascade)
+  order   Int
+  type    String
   content String
 }
 
 model Chapter {
-  id String @id @default(cuid())
-  partId String
-  part Part @relation(fields: [partId], references: [id], onDelete: Cascade)
-  order Int
-  title String @unique
+  id      String          @id @default(cuid())
+  partId  String
+  part    Part            @relation(fields: [partId], references: [id], onDelete: Cascade)
+  order   Int
+  title   String          @unique
   details ChapterDetail[]
 }
 
 model ChapterDetail {
-  id String @id @default(cuid())
+  id        String  @id @default(cuid())
   chapterId String
-  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-  order Int
-  type String
-  content String
+  chapter   Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  order     Int
+  type      String
+  content   String
 }
