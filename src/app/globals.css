@@ -32,15 +32,6 @@ i.bi {
     color: #1648C5;
 }
 
-.guide-content .edit-button {
-    top: 20%;
-    display: none;
-}
-
-.guide-content:hover .edit-button {
-    display: inline-block;
-}
-
 .edit-button:hover i, .add-chapter-button:hover i {
     color: rgb(139, 139, 139);
 }
