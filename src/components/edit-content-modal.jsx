@@ -13,10 +13,9 @@ export default function EditContentModal({ detail, resetDetail, fetchDetails }) 
     const [image, setImage] = useState(null);
 
     const fetchCode = async () => {
-        if(detail?.type !== "command" && detail?.type !== "image") {
-            const response = await fetch("/code/" + detail?.content);
-            setContent(await response.text());
-        } else if(detail?.type === "command") {
+        if(detail?.type !== "command" && detail?.type !== "image" && detail?.type !== "text") {
+            setContent(JSON.parse(detail?.content));
+        } else if(detail?.type === "command" || detail?.type === "text") {
             setContent(detail?.content);
         }
     };
