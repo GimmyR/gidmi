@@ -3,6 +3,8 @@ import PreviousNext from "./previous-next";
 import GuideBody from "./guide-body";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import SortableGuideBody from "./sortable-guide-body";
+import EditMenuButton from "./edit-menu-button";
+import EditMenuModal from "./edit-menu-modal";
 
 export default async function Guide({ contentID, contentType, title, parts, details }) {
 	const findPrevious = () => {
@@ -129,6 +131,11 @@ export default async function Guide({ contentID, contentType, title, parts, deta
 					<button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navigation" aria-label="Close"></button>
 				</div>
 				<div className="offcanvas-body d-flex flex-column align-items-center px-3">
+					<SignedIn>
+						<div className="d-flex flex-row col-12 ps-3 pe-5 mb-4">
+							<EditMenuButton/>
+						</div>
+					</SignedIn>
 					<NavMenu parts={parts} selected={title}/>
 				</div>
 			</nav>
@@ -144,6 +151,7 @@ export default async function Guide({ contentID, contentType, title, parts, deta
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</main>
 			<aside className="d-none d-lg-flex justify-content-center col-lg-3 px-3"></aside>
+			<EditMenuModal parts={parts}/>
 		</div>
     );
 }
