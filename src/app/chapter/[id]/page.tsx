@@ -20,6 +20,6 @@ export default async function ChapterPage({ params } : Props) {
     const parts = await findAllPartsByGuideId(chapter?.part.guideId);
     
     return (
-        <Guide title={chapter?.title} parts={parts} details={chapter?.details}/>
+        <Guide contentID={id} contentType="chapter" title={chapter?.title} parts={parts} details={chapter?.details}/>
     );
 }

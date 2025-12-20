@@ -2,8 +2,9 @@ import NavMenu from "@/components/navigation-menu";
 import PreviousNext from "./previous-next";
 import GuideBody from "./guide-body";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import SortableGuideBody from "./sortable-guide-body";
 
-export default async function Guide({ title, parts, details }) {
+export default async function Guide({ contentID, contentType, title, parts, details }) {
 	const findPrevious = () => {
 		let counter = 0;
 		for(let i = 0; i < parts.length; i++) {
@@ -137,7 +138,7 @@ export default async function Guide({ title, parts, details }) {
 						<GuideBody title={title} details={details}/>
 					</SignedOut>
 					<SignedIn>
-
+						<SortableGuideBody contentID={contentID} contentType={contentType} title={title} details={details}/>
 					</SignedIn>
 				</section>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
