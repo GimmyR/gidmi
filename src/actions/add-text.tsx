@@ -3,7 +3,6 @@
 import { Detail } from "@/interfaces/detail";
 import { nextOrder } from "./next-order";
 import prisma from "@/lib/prisma";
-import { addFile } from "./add-file";
 
 export async function addText(detail: Detail, language: string) {
     const toAdd = {
