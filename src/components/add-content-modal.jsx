@@ -16,7 +16,7 @@ export default function AddContentModal({ contentID, contentType, fetchDetails }
             await addCommand(detail);
             resetDetail();
             fetchDetails();
-        } else if(detail.type == "text" || detail.type == "code") {
+        } else if(detail.type == "text") {
             await addText(detail, language);
             resetDetail();
             fetchDetails();
@@ -24,6 +24,11 @@ export default function AddContentModal({ contentID, contentType, fetchDetails }
             const data = new FormData();
             data.append("image", image);
             await addImage(detail, data);
+            resetDetail();
+            fetchDetails();
+        } else {
+            const detail2 = {...detail, content: JSON.stringify(detail.content)};
+            await addText(detail2, language);
             resetDetail();
             fetchDetails();
         }
@@ -36,10 +41,7 @@ export default function AddContentModal({ contentID, contentType, fetchDetails }
     };
 
     const setContentType = () => {
-        if(contentType == "guide") {
-            detail.guideId = contentID;
-            setDetail({...detail});
-        } else if(contentType == "part") {
+        if(contentType == "part") {
             detail.partId = contentID;
             setDetail({...detail});
         } else if(contentType == "chapter") {

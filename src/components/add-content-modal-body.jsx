@@ -20,7 +20,7 @@ export default function AddContentModalBody({ detail, setDetail, language, setLa
 
     return (
         <form>
-            <div className={`${detail.type != "" && "mb-3"}`}>
+            <div className="mb-3">
                 <select className="form-select text-bg-dark" onChange={handleTypeChange}>
                     <option value="">Select content type</option>
                     <option value="text">Text</option>
@@ -34,14 +34,12 @@ export default function AddContentModalBody({ detail, setDetail, language, setLa
                     <input type="text" value={detail.content} onChange={handleContentChange} className="form-control text-bg-dark"/>
                 : detail.type === "text" ?
                     <textarea value={detail.content} onChange={handleContentChange} className="form-control text-bg-dark"></textarea>
-                : detail.type === "code" ?
-                    <div>
-                        <input type="text" value={language} onChange={handleLanguageChange} className="form-control text-bg-dark mb-3"/>
-                        <textarea value={detail.content} onChange={handleContentChange} className="form-control text-bg-dark" rows="3"></textarea>
-                    </div>
                 : detail.type === "image" ?
                     <input type="file" className="form-control text-bg-dark" onChange={handleImageChange}/>
-                : null}
+                : <div>
+                    <input type="text" value={language} onChange={handleLanguageChange} className="form-control text-bg-dark mb-3"/>
+                    <textarea value={detail.content} onChange={handleContentChange} className="form-control text-bg-dark" rows="3"></textarea>
+                </div>}
             </div>
         </form>
     );
