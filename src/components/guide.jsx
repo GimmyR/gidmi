@@ -1,6 +1,7 @@
 import NavMenu from "@/components/navigation-menu";
 import PreviousNext from "./previous-next";
-import GuideContentByType from "./guide-content-by-type";
+import GuideBody from "./guide-body";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default async function Guide({ title, parts, details }) {
 	const findPrevious = () => {
@@ -132,8 +133,12 @@ export default async function Guide({ title, parts, details }) {
 			</nav>
 			<main className="d-flex flex-column min-vh-100 col-12 col-lg-6 p-2 p-lg-0">
 				<section>
-					<h1 className="mb-5">{title}</h1>
-					{details.map((detail) => <GuideContentByType key={detail.id} detail={detail}/>)}
+					<SignedOut>
+						<GuideBody title={title} details={details}/>
+					</SignedOut>
+					<SignedIn>
+
+					</SignedIn>
 				</section>
 				<PreviousNext previous={findPrevious()} next={findNext()}/>
 			</main>
