@@ -12,7 +12,7 @@ export default function ClipboardIconButton({
     const { isCopied, copyToClipboard } = useClipboard();
 
     return (
-        <button className={className} onClick={() => copyToClipboard(code)}>
+        <button className={className} onClick={() => copyToClipboard(JSON.parse(code))}>
             <i className={ `bi ${ isCopied ? 'bi-clipboard-check' : 'bi-clipboard' }` }></i>
         </button>
     );
