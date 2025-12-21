@@ -76,7 +76,7 @@ export default function EditMenuModal({ parts }) {
             
         } else {
 
-            await saveParts(menu, toRemove);
+            await saveParts(parts[0].guideId, menu, toRemove);
             resetAll();
 
         }
