@@ -10,14 +10,14 @@ export async function POST(req: NextRequest) {
         console.log(`Received webhook with ID ${id} and event type of ${eventType}`);
 
         if (eventType === "user.created") {
-            const { id, email_addresses, first_name, last_name } = evt.data;
+            const { id, email_addresses, username } = evt.data;
             await prisma.user.upsert({
                 where: { clerkId: id },
                 update: {},
                 create: {
                     clerkId: id,
                     email: email_addresses[0].email_address,
-                    name: `${first_name} ${last_name}`,
+                    name: `${username}`,
                 },
             });
         }
