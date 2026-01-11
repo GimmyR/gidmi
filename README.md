@@ -1,19 +1,39 @@
 # Gidmi
 
+**Live demo:** https://gidmi.vercel.app/
+
+Gidmi is an interactive learning platform that guides developers through building a complete **Next.js full-stack application**.
+
+It is built with :
+
+* **Next** for the frontend and the backend (fullstack framework)
+* **Clerk** for secure authentication
+* **Prisma ORM** for database access
+* **Prisma PostgreSQL** for data persistence
+
 ## Prerequisites
 
-* **Node** version **20.18.0** or plus
-* **NPM** version **11.6.0** or plus
+Before running the application, make sure you have the following installed :
+
+* **Node** 20.18.0
+* **NPM** 11.6.0
 
 ## Environment
 
-* **NEXT_PUBLIC_EMAILJS_PUBLIC_KEY** to set the public key of your emailjs
-* **NEXT_PUBLIC_EMAILJS_SERVICE_ID** to set the service ID of your emailjs
-* **NEXT_PUBLIC_EMAILJS_TEMPLATE_ID** to set the template ID of your emailjs
+```bash
+# Your emailjs public key
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=public_key_change_me
+
+# Your emailjs service ID
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_id_change_me
+
+#Your emailjs template ID
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_id_change_me
+```
 
 ## Dependencies
 
-Run the command :
+Install the dependencies by running :
 
 ```bash
 npm install
@@ -21,8 +41,14 @@ npm install
 
 ## Launch the application
 
-Run the command :
+Run the application by executing the following command :
 
 ```bash
 npm run dev
 ```
+
+You can access the application in your browser at http://localhost:3000.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
