@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="d-flex flex-row justify-content-center py-5">
                         <div className="d-flex flex-row col-6 justify-content-center align-items-center">
                             <p className="text-light col-8">
-                                <b>Gidmi</b> is a website where you can follow a guide for Next fullstack application.
+                                <b>Gidmi</b> is an interactive learning platform that guides developers through building a complete Next.js full-stack application.
                             </p>
                         </div>
                         <div className="d-flex flex-row col-6 justify-content-evenly">
